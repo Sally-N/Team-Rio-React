@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import BlogFilterButton from '../Button/BlogFilterButton';
+import SearchBar from '../Search/searchbar';
 
 export default function CategoryFilter() {
   const [selectedCategory, setSelectedCategory] = useState('');
@@ -19,8 +20,14 @@ export default function CategoryFilter() {
   };
 
   return (
-    <section id="category-filter" className="mt-2">
-      <div className="bg-black h-0.5 w-full"></div>
+    <section id="category-filter" className="h-40 mt-2">
+      <div className="bg-black h-0.5 w-full">
+      </div>
+      <div className="h-16 w-full flex mt-1">
+        <SearchBar
+        isActive
+        />
+      </div>
       <div className="h-24 flex justify-center items-center">
         {categories.map((category, index) => {
           return (

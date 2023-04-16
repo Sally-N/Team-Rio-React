@@ -19,3 +19,8 @@ export interface BlogFilterButtonProps {
   isActive: boolean;
   handleClick: (category: string) => void;
 }
+
+
+export interface SearchBarProps {
+  isActive: boolean;
+}
